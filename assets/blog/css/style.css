@@ -1,0 +1,107 @@
+* {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Tahoma;
+    background-color: #ecf0f1;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #16a085;
+    padding: 2rem;
+    box-shadow: 2px 2px 8px #bdc3c7;
+}
+
+.header h1 {
+    color: #ecf0f1;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: calc(100% - 30rem);
+    height: auto;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 8px #bdc3c7;
+    background-color: #ffffff;
+    margin: 1.5rem 0;
+    transition: all 200ms ease-in-out;
+}
+.article:hover{
+    transform: scale(1.01);
+}
+.article__image{
+    width: 30%;
+    height: 30rem;
+    border-radius: 1rem 5rem;
+}
+.article__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 5rem;
+}
+.article__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    align-items: center;
+    width: calc(100% - 35%);
+    min-height: 30rem;
+    /*background-color: silver;*/
+}
+.content__link{
+    font-size: 3rem;
+    color: #16a085;
+    transition: all 300ms linear;
+}
+.content__link:hover{
+    letter-spacing: 1px;
+}
+.content__description{
+    font-size: 1.5rem;
+    color: #34495e;
+    text-align: center;
+}
+.content__author-publish{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+.content__author-publish span{
+    font-size: 1.3rem;
+    color: #34495e;
+}

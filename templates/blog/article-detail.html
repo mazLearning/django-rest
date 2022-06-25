@@ -1,0 +1,20 @@
+{% extends 'blog/shared/_MainLayout.html' %}
+
+{% block content %}
+    <section class="articles">
+        <article class="article">
+            <div class="article__image">
+                <img src="{{ object.image.url }}" alt="image not found">
+            </div>
+            <div class="article__content">
+                <a class="content__link">{{ object.title }}</a>
+                <div class="content__author-publish">
+                    <span>{{ object.publish }}</span>
+                    <span>{{ object.author }}</span>
+                </div>
+                <p class="content__description">{{ object.description|linebreaks }}</p>
+            </div>
+        </article>
+
+    </section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'blog/shared/_MainLayout.html' %}
+
+{% block content %}
+    <section class="articles">
+        {% for article in object_list %}
+            <article class="article">
+                <div class="article__image">
+                    <a href="{% url 'blog:article_detail' article.slug %}"><img src="{{ article.image.url }}" alt="image not found"></a>
+                </div>
+                <div class="article__content">
+                    <a href="{% url 'blog:article_detail' article.slug %}" class="content__link">{{ article.title }}</a>
+                    <div class="content__author-publish">
+                        <span>{{ article.publish }}</span>
+                        <span>{{ article.author }}</span>
+                    </div>
+                    <p class="content__description">{{ article.description|truncatewords:40 }}</p>
+                </div>
+            </article>
+        {% endfor %}
+
+
+    </section>
+{% endblock %}
